@@ -16,13 +16,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="338" column="54" selection-start-line="338" selection-start-column="54" selection-end-line="338" selection-end-column="54" />
+            <state relative-caret-position="289">
+              <caret line="161" column="35" lean-forward="true" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
               <folding>
                 <element signature="e#407#446#0" />
                 <element signature="e#548#1644#0" />
                 <element signature="e#1680#2530#0" />
                 <element signature="e#2566#4723#0" />
+                <element signature="e#4762#5704#0" />
+                <element signature="e#5743#7076#0" />
+                <element signature="e#7115#8521#0" />
+                <element signature="e#8559#10156#0" />
+                <element signature="e#10197#11205#0" />
               </folding>
             </state>
           </provider>
@@ -195,12 +200,12 @@
       <workItem from="1561464265181" duration="4000" />
       <workItem from="1561533435396" duration="7988000" />
       <workItem from="1561619650066" duration="4951000" />
-      <workItem from="1561636348859" duration="2593000" />
+      <workItem from="1561636348859" duration="2878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130803000" />
+    <option name="totallyTimeSpent" value="131088000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -216,7 +221,7 @@
     <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17732793" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17732793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Project Explorer" order="3" />
@@ -383,13 +388,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="338" column="54" selection-start-line="338" selection-start-column="54" selection-end-line="338" selection-end-column="54" />
+        <state relative-caret-position="289">
+          <caret line="161" column="35" lean-forward="true" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
           <folding>
             <element signature="e#407#446#0" />
             <element signature="e#548#1644#0" />
             <element signature="e#1680#2530#0" />
             <element signature="e#2566#4723#0" />
+            <element signature="e#4762#5704#0" />
+            <element signature="e#5743#7076#0" />
+            <element signature="e#7115#8521#0" />
+            <element signature="e#8559#10156#0" />
+            <element signature="e#10197#11205#0" />
           </folding>
         </state>
       </provider>
