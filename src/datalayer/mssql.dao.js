@@ -1,0 +1,34 @@
+// De gedownloade libraries uit node_modules.
+const sql       = require('mssql');
+const config    = require('../config/appconfig');
+const logger    = config.logger;
+const dbconfig  = config.dbconfig;
+
+module.exports = {
+    // Het opstellen van de connectie.
+    executeQuery: (query, callback) => {
+        sql.connect(dbconfig, err => {
+            if (err) {
+                logger.error('Error connecting: ', err.toString());
+                callback(err, null);
+                sql.close()
+            }
+
+            if (!err) {
+                // Het runnen en controleren van de query.
+                new sql.Request().query(query, (err, result) => {
+
+                    if (err) {
+                        logger.error('error', err.toString());
+                        callback(err, null);
+                        sql.close()
+                    }
+                    if (result) {
+                        callback(null, result);
+                        sql.close()
+                    }
+                })
+            }
+        })
+    }
+};

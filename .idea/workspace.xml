@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e5c1bb4b-a176-4a0f-9429-eb05d1327e8c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/routes/appartement.js" />
+        <option value="$PROJECT_DIR$/config/appconfig.js" />
+        <option value="$PROJECT_DIR$/moviedb.sql" />
+        <option value="$PROJECT_DIR$/test/reservation.test.js" />
+        <option value="$PROJECT_DIR$/test/appartment.test.js" />
+        <option value="$PROJECT_DIR$/routes/appartementen.routes.js" />
+        <option value="$PROJECT_DIR$/routes/authentication.routes.js" />
+        <option value="$PROJECT_DIR$/routes/reservation.routes.js" />
+        <option value="$PROJECT_DIR$/controller/reservation.controller.js" />
+        <option value="$PROJECT_DIR$/controller/appartement.controller.js" />
+        <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/controller/authentication.controller.js" />
+        <option value="$PROJECT_DIR$/datalayer/mssql.dao.js" />
+        <option value="$PROJECT_DIR$/src/datalayer/mssql.dao.js" />
+        <option value="$PROJECT_DIR$/src/config/appconfig.js" />
+        <option value="$PROJECT_DIR$/src/routes/authentication.routes.js" />
+        <option value="$PROJECT_DIR$/src/controller/authentication.controller.js" />
+        <option value="$PROJECT_DIR$/src/controller/appartement.controller.js" />
+        <option value="$PROJECT_DIR$/src/routes/appartementen.routes.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/src/routes/apartment.routes.js" />
+        <option value="$PROJECT_DIR$/src/controller/apartment.controller.js" />
+        <option value="$PROJECT_DIR$/src/routes/reservation.routes.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/controller/reservation.controller.js" />
+        <option value="$PROJECT_DIR$/test/test.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="948" />
+    <option name="y" value="-12" />
+    <option name="width" value="984" />
+    <option name="height" value="1104" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../projectnostradamus" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\School\Jaar 1 periode 4\Programmeren4\MovieApp\AssesmentProgrammeren4\AppartementenApp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\School\Jaar 1 periode 4\Programmeren4\MovieApp\AssesmentProgrammeren4\AppartementenApp\mssqldb" />
+      <recent name="C:\School\Jaar 1 periode 4\Programmeren4\MovieApp\AssesmentProgrammeren4\AppartementenApp\test" />
+      <recent name="C:\School\Jaar 1 periode 4\Programmeren4\MovieApp\AssesmentProgrammeren4\AppartementenApp\mysqldb" />
+      <recent name="C:\School\Jaar 1 periode 4\Programmeren4\MovieApp\AssesmentProgrammeren4\AppartementenApp\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5c1bb4b-a176-4a0f-9429-eb05d1327e8c" name="Default Changelist" comment="" />
+      <created>1557561305189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557561305189</updated>
+      <workItem from="1557561306371" duration="217000" />
+      <workItem from="1557561535992" duration="1488000" />
+      <workItem from="1557732982032" duration="16818000" />
+      <workItem from="1557765192494" duration="170000" />
+      <workItem from="1557821694163" duration="14820000" />
+      <workItem from="1557902634769" duration="27765000" />
+      <workItem from="1558000599619" duration="44000" />
+      <workItem from="1558001125547" duration="10559000" />
+      <workItem from="1558075165656" duration="2282000" />
+      <workItem from="1558517871764" duration="656000" />
+      <workItem from="1558519219398" duration="598000" />
+      <workItem from="1558533908113" duration="1062000" />
+      <workItem from="1558614760374" duration="2389000" />
+      <workItem from="1558684561784" duration="26000" />
+      <workItem from="1558687501784" duration="1081000" />
+      <workItem from="1558943170051" duration="304000" />
+      <workItem from="1558959870169" duration="32000" />
+      <workItem from="1561189473955" duration="3210000" />
+      <workItem from="1561192781221" duration="2414000" />
+      <workItem from="1561275632888" duration="8765000" />
+      <workItem from="1561359966856" duration="11599000" />
+      <workItem from="1561380986994" duration="5637000" />
+      <workItem from="1561448770806" duration="3331000" />
+      <workItem from="1561464265181" duration="4000" />
+      <workItem from="1561533435396" duration="7988000" />
+      <workItem from="1561619650066" duration="4951000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="128210000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3910931" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="2" />
+      <window_info id="Project Explorer" order="3" />
+      <window_info id="Job Explorer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3283582" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3283582" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3283582" />
+      <window_info anchor="bottom" id="DB Execution Console" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49878544" weight="0.7180763" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50121456" side_tool="true" weight="0.22719735" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39271256" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="2" />
+      <window_info id="Project Explorer" order="3" />
+      <window_info id="Job Explorer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3283582" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3283582" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3283582" />
+      <window_info anchor="bottom" id="DB Execution Console" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49878544" weight="0.7180763" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50121456" side_tool="true" weight="0.22719735" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config.js" />
+    <entry file="file://$PROJECT_DIR$/routes/appartement.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/.bin/_mocha">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/reservation.test.js" />
+    <entry file="file://$PROJECT_DIR$/test/appartment.test.js" />
+    <entry file="file://$PROJECT_DIR$/console.log(item.number))" />
+    <entry file="file://$PROJECT_DIR$/.gitattributes" />
+    <entry file="file://$PROJECT_DIR$/LICENSE" />
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqldb/moviedb.sql" />
+    <entry file="file://$PROJECT_DIR$/src/config/appconfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datalayer/mssql.dao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/authentication.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/authentication.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mssqldb/appartement-verhuur-casus.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/reservation.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/apartment.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/apartment.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="201" column="2" lean-forward="true" selection-start-line="201" selection-start-column="2" selection-end-line="201" selection-end-column="2" />
+          <folding>
+            <element signature="e#314#1998#0" />
+            <element signature="e#2043#2875#0" />
+            <element signature="e#2920#3971#0" />
+            <element signature="e#4019#5964#0" />
+            <element signature="e#6012#6950#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mocha/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mocha/mocha.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48194" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/reservation.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="e#210#1943#0" />
+            <element signature="e#1990#2844#0" />
+            <element signature="e#2891#3736#0" />
+            <element signature="e#3786#5105#0" />
+            <element signature="e#5155#6165#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="366" lean-forward="true" selection-start-line="366" selection-end-line="366" />
+          <folding>
+            <element signature="e#407#446#0" />
+            <element signature="e#548#1644#0" />
+            <element signature="e#1680#2530#0" />
+            <element signature="e#2566#4723#0" />
+            <element signature="e#4762#5704#0" />
+            <element signature="e#6227#7560#0" />
+            <element signature="e#7599#9009#0" />
+            <element signature="e#9047#9055#0" />
+            <element signature="e#10691#11352#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

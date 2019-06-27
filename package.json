@@ -1,0 +1,32 @@
+{
+  "name": "appartementenapp",
+  "version": "1.0.0",
+  "description": "Welkom bij de appartementenapp van Jasper",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "mocha --timeout 15000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvliet6/AppartementenApp.git"
+  },
+  "author": "Jasper van Vliet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvliet6/AppartementenApp/issues"
+  },
+  "homepage": "https://github.com/jvliet6/AppartementenApp#readme",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.1.4",
+    "mssql": "^5.1.0",
+    "nodemon": "^1.19.0",
+    "tracer": "^0.9.8"
+  }
+}
