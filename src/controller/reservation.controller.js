@@ -8,7 +8,6 @@ module.exports = {
         const id = req.params.id;
         const reservation = req.body;
 
-        logger.info(reservation);
         try {
             assert.equal(typeof reservation.startDate, 'string', 'startDate is required.');
             assert.equal(typeof reservation.endDate, 'string', 'endDate is required.');
@@ -175,7 +174,7 @@ module.exports = {
                     };
                     next(errorObject);
                 } else {
-                    res.status(200).json({ message: 'Reservation is deleted.' })
+                    res.status(200).json({ message: 'Reservation is deleted.'})
                 }
             }
         });

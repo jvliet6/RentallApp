@@ -5,7 +5,6 @@ const logger    = config.logger;
 const dbconfig  = config.dbconfig;
 
 module.exports = {
-    // Het opstellen van de connectie.
     executeQuery: (query, callback) => {
         sql.connect(dbconfig, err => {
             if (err) {
@@ -15,7 +14,6 @@ module.exports = {
             }
 
             if (!err) {
-                // Het runnen en controleren van de query.
                 new sql.Request().query(query, (err, result) => {
 
                     if (err) {

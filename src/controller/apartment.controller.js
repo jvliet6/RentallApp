@@ -8,16 +8,13 @@ module.exports = {
     createApartment: (req, res, next) => {
         logger.info('createApartment is called.');
         logger.trace('User id: ', req.userId);
-
-        const apartement = req.body;
-        logger.info(apartement);
+        const apartment = req.body;
 
         try {
-            assert.equal(typeof apartement.description, 'string', 'description is required.');
-            assert.equal(typeof apartement.streetAddress, 'string', 'streetAddress is required.');
-            assert.equal(typeof apartement.city, 'string', 'city is required.');
-            assert(postalCodeValidator.test(apartement.postalCode), 'A valid postalCode is required.');
-
+            assert.equal(typeof apartment.description, 'string', 'description is required.');
+            assert.equal(typeof apartment.streetAddress, 'string', 'streetAddress is required.');
+            assert.equal(typeof apartment.city, 'string', 'city is required.');
+            assert(postalCodeValidator.test(apartment.postalCode), 'A valid postalCode is required.');
         } catch (e) {
             const errorObject = {
                 message: 'Validation fails: ' + e.toString(),
@@ -28,13 +25,13 @@ module.exports = {
 
         const query =
             "INSERT INTO Apartment(Description, StreetAddress, PostalCode, City, UserId) VALUES ('" +
-            apartement.description +
+            apartment.description +
             "','" +
-            apartement.streetAddress +
+            apartment.streetAddress +
             "','" +
-            apartement.postalCode +
+            apartment.postalCode +
             "','" +
-            apartement.city +
+            apartment.city +
             "','" +
             req.userId +
             "'); SELECT ApartmentId FROM Apartment INNER JOIN DBUser ON Apartment.UserId = DBUser.UserId WHERE ApartmentId = SCOPE_IDENTITY();";
@@ -57,7 +54,7 @@ module.exports = {
     getAllApartments: (req, res, next) => {
       logger.info('getAllApartments is called.');
 
-      const query = 'SELECT * FROM Apartment ' + 'INNER JOIN DBUser ON (Apartment.UserId = DBUser.UserId) ';
+      const query = 'SELECT * FROM Apartment ' + 'INNER JOIN DBUser ON (Apartment.UserId = DBUser.UserId)';
 
         database.executeQuery(query, (err, rows) => {
             if (err) {
@@ -70,9 +67,8 @@ module.exports = {
 
             if (rows) {
                 if(rows.recordset.length > 0){
-                    res.status(200).json({ result: rows.recordset })
-
-                }else{
+                    res.status(200).json({result: rows.recordset})
+                } else {
                     const errorObject = {
                         message: 'No apartments found!',
                         code: 404
@@ -103,10 +99,8 @@ module.exports = {
 
             if (rows) {
                 if(rows.recordset.length > 0){
-                    res.status(200).json({ result: rows.recordset })
-                }
-
-                else{
+                    res.status(200).json({result: rows.recordset})
+                } else {
                     const errorObject = {
                         message: 'No apartment found!',
                         code: 404
@@ -121,7 +115,6 @@ module.exports = {
       logger.info('updateApartmentById is called.');
       const id = req.params.id;
       const userId = req.userId;
-
       const apartment = req.body;
 
         try {
@@ -129,7 +122,6 @@ module.exports = {
             assert.equal(typeof apartment.streetAddress, 'string', 'streetAddress is required.');
             assert.equal(typeof apartment.city, 'string', 'city is required.');
             assert(postalCodeValidator.test(apartment.postalCode), 'A valid postalCode is required.');
-
         } catch (e) {
             const errorObject = {
                 message: 'Validation fails: ' + e.toString(),
@@ -162,7 +154,7 @@ module.exports = {
                     next(errorObject)
                 } else {
                     res.status(200).json({
-                        message: "Apartment is updated",
+                        message: "Apartment is updated!",
                         result: rows.recordset
                     })
                 }
@@ -180,7 +172,7 @@ module.exports = {
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
-                    message: 'Error at query',
+                    message: 'Error at query.',
                     code: 500
                 };
                 next(errorObject)
@@ -194,7 +186,7 @@ module.exports = {
                     };
                     next(errorObject)
                 } else {
-                    res.status(200).json({message: "Apartment is deleted."})
+                    res.status(200).json({message: "Apartment is deleted!"})
                 }
             }
         })
