@@ -162,7 +162,7 @@ describe('PUT Apartment', () => {
 describe('DELETE Apartment', () => {
    it('Delete apartment.', done => {
        chai.request(server)
-           .delete('/api/apartments/1830')
+           .delete('/api/apartments/1742')
            .set('Authorization', 'Bearer ' + token)
            .end(function (err, res, body) {
                res.should.have.status(200);
@@ -336,7 +336,7 @@ describe('PUT Reservation', () => {
 describe('DELETE Reservation', () => {
     it('Delete reservation.', done => {
         chai.request(server)
-            .delete('/api/apartments/reservations/1291')
+            .delete('/api/apartments/reservations/1273')
             .set('Authorization', 'Bearer ' + token)
             .end(function (err, res, body) {
                 res.should.have.status(200);
