@@ -1,3 +1,4 @@
+// The downloaded libraries and connections to other classes.
 const logger    = require('../config/appconfig').logger;
 const database  = require('../datalayer/mssql.dao');
 const assert    = require('assert');
@@ -8,6 +9,7 @@ module.exports = {
         const id = req.params.id;
         const reservation = req.body;
 
+        // Checking if the body is filled in correctly.
         try {
             assert.equal(typeof reservation.startDate, 'string', 'startDate is required.');
             assert.equal(typeof reservation.endDate, 'string', 'endDate is required.');
@@ -19,6 +21,7 @@ module.exports = {
             return next(errorObject)
         }
 
+        // Setting the variables for start and end date to check the dates.
         var startDate = reservation.startDate;
         var endDate = reservation.endDate;
         startDate = new Date(startDate);
@@ -32,6 +35,7 @@ module.exports = {
             return next(errorObject);
         }
 
+        // Setting up the query.
         const query =
             "INSERT INTO Reservation(ApartmentId, StartDate, EndDate, Status, UserId) VALUES ('" +
             id +
@@ -45,17 +49,20 @@ module.exports = {
             req.userId +
             "');";
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
-                    message: "Error at INSERT INTO Reservation.",
-                    code: 500
+                    message: "Reservation is not created because of wrong input!",
+                    code: 401
                 };
                 next(errorObject)
             }
 
             if (rows) {
-                res.status(200).json({message: "Reservation is created."})
+                 {
+                    res.status(200).json({message: 'Reservation created!'})
+                 }
             }
         })
     },
@@ -64,12 +71,14 @@ module.exports = {
         logger.info('getAllReservations is called.');
         const id = req.params.id;
 
+        // Setting up the query.
         const query = `SELECT * FROM Reservation WHERE Reservation.ApartmentId=${id};`;
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
-                    message: 'Error at database.',
+                    message: 'Error at query.',
                     code: 500
                 };
                 next(errorObject)
@@ -93,12 +102,14 @@ module.exports = {
         logger.info('getReservationById is called.');
         const id = req.params.id;
 
+        // Setting up the query.
         const query = `SELECT * FROM Reservation WHERE ReservationId = ${id};`;
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
-                    message: 'Error at database.',
+                    message: 'Error at query.',
                     code: 500
                 };
                 next(errorObject)
@@ -125,8 +136,10 @@ module.exports = {
         const userId = req.userId;
         const status = req.body.status;
 
+        // Setting up the query.
         const query = `UPDATE Reservation SET Reservation.Status='${status}' FROM Reservation INNER JOIN Apartment ON Reservation.ApartmentId = Apartment.ApartmentId AND Reservation.UserId = Apartment.UserId WHERE Reservation.UserId=${userId} AND Reservation.ApartmentId=${apartmentId} AND Reservation.ReservationId=${reservationId} `;
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
@@ -155,8 +168,10 @@ module.exports = {
         const reservationId = req.params.reservationId;
         const userId = req.userId;
 
+        // Setting up the query.
         const query = `DELETE FROM Reservation WHERE ReservationId=${reservationId} AND UserId=${userId}`;
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {

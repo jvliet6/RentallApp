@@ -1,10 +1,11 @@
-// De gedownloade libraries uit node_modules.
+// The downloaded libraries and connections to other classes.
 const sql       = require('mssql');
 const config    = require('../config/appconfig');
 const logger    = config.logger;
 const dbconfig  = config.dbconfig;
 
 module.exports = {
+    // Executing the query and giving back error or result.
     executeQuery: (query, callback) => {
         sql.connect(dbconfig, err => {
             if (err) {

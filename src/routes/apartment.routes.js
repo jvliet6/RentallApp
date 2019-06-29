@@ -1,3 +1,4 @@
+// The downloaded libraries and connections to other classes.
 const express               = require('express');
 const router                = express.Router();
 const apartmentController   = require('../controller/apartment.controller');

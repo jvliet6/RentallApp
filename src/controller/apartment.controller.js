@@ -1,7 +1,9 @@
+// The downloaded libraries and connections to other classes.
 const logger    = require('../config/appconfig').logger;
 const database  = require('../datalayer/mssql.dao');
 const assert    = require('assert');
 
+// The extra check on postalCode.
 const postalCodeValidator = new RegExp('^([1-9][0-9]{3})([ ]{0,1})(?!SD|sd|SS|ss|SA|sa)([a-zA-Z]{2})$');
 
 module.exports = {
@@ -10,6 +12,7 @@ module.exports = {
         logger.trace('User id: ', req.userId);
         const apartment = req.body;
 
+        // Checking if the body is filled in correctly.
         try {
             assert.equal(typeof apartment.description, 'string', 'description is required.');
             assert.equal(typeof apartment.streetAddress, 'string', 'streetAddress is required.');
@@ -23,6 +26,7 @@ module.exports = {
             return next(errorObject)
         }
 
+        // Setting up the query.
         const query =
             "INSERT INTO Apartment(Description, StreetAddress, PostalCode, City, UserId) VALUES ('" +
             apartment.description +
@@ -36,6 +40,7 @@ module.exports = {
             req.userId +
             "'); SELECT ApartmentId FROM Apartment INNER JOIN DBUser ON Apartment.UserId = DBUser.UserId WHERE ApartmentId = SCOPE_IDENTITY();";
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
@@ -54,8 +59,10 @@ module.exports = {
     getAllApartments: (req, res, next) => {
       logger.info('getAllApartments is called.');
 
+      // Setting up the query.
       const query = 'SELECT * FROM Apartment ' + 'INNER JOIN DBUser ON (Apartment.UserId = DBUser.UserId)';
 
+      // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
@@ -83,11 +90,13 @@ module.exports = {
         logger.info('getApartmentById is called.');
         const id = req.params.id;
 
+        // Setting up the query.
         const query = 'SELECT * FROM Apartment ' +
             'FULL OUTER JOIN DBUser ON (Apartment.UserId = DBUser.UserId) ' +
             'FULL OUTER JOIN Reservation ON (Apartment.ApartmentId = Reservation.ApartmentId) '+
             `WHERE Apartment.ApartmentId = ${id}`;
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
@@ -117,6 +126,7 @@ module.exports = {
       const userId = req.userId;
       const apartment = req.body;
 
+        // Checking if the body is filled in correctly.
         try {
             assert.equal(typeof apartment.description, 'string', 'description is required.');
             assert.equal(typeof apartment.streetAddress, 'string', 'streetAddress is required.');
@@ -130,12 +140,14 @@ module.exports = {
             return next(errorObject)
         }
 
+        // Setting up the query.
         const query =
             `UPDATE Apartment ` +
             `SET Description = '${apartment.description}', StreetAddress = '${apartment.streetAddress}', PostalCode = '${apartment.postalCode}', City = '${apartment.city}' ` +
             `WHERE ApartmentId = ${id} AND UserId = ${userId} ` +
             `; SELECT * FROM Apartment WHERE ApartmentId = ${id}`;
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
@@ -167,8 +179,10 @@ module.exports = {
       const id     = req.params.id;
       const userId = req.userId;
 
+      // Setting up the query.
       const query = `DELETE FROM Apartment WHERE ApartmentId = ${id} AND UserId = ${userId};`;
 
+      // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {

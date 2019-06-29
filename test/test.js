@@ -1,3 +1,4 @@
+// The downloaded libraries and connections to other classes.
 const chai      = require('chai');
 const chaiHttp  = require('chai-http');
 const jwt       = require('jsonwebtoken');
@@ -8,6 +9,7 @@ chai.use(chaiHttp);
 
 let token;
 
+// Getting access by adding the jwt token to the payload (UserId).
 before(() => {
     console.log('before');
 
@@ -162,7 +164,7 @@ describe('PUT Apartment', () => {
 describe('DELETE Apartment', () => {
    it('Delete apartment.', done => {
        chai.request(server)
-           .delete('/api/apartments/1832')
+           .delete('/api/apartments/1846')
            .set('Authorization', 'Bearer ' + token)
            .end(function (err, res, body) {
                res.should.have.status(200);
@@ -336,7 +338,7 @@ describe('PUT Reservation', () => {
 describe('DELETE Reservation', () => {
     it('Delete reservation.', done => {
         chai.request(server)
-            .delete('/api/apartments/reservations/1283')
+            .delete('/api/apartments/reservations/1285')
             .set('Authorization', 'Bearer ' + token)
             .end(function (err, res, body) {
                 res.should.have.status(200);

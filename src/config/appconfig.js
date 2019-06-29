@@ -1,4 +1,5 @@
 module.exports = {
+    // Building the logger.
     logger: require('tracer').colorConsole({
         format: [
             '{{timestamp}} <{{title}}> {{message}} (in {{file}}:{{line}})',
@@ -14,6 +15,7 @@ module.exports = {
         level: "info, error"
     }),
 
+    // Information about the database.
     dbconfig: {
         user: "progr4",
         password: "password123",

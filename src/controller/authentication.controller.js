@@ -1,18 +1,21 @@
+// The downloaded libraries and connections to other classes.
 const logger    = require('../config/appconfig').logger;
 const jwt       = require('jsonwebtoken');
 const database  = require('../datalayer/mssql.dao');
 const assert    = require('assert');
 
+// The extra check.
 const postalCodeValidator = new RegExp('^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-zA-Z]{2}$');
-const phoneValidator = new RegExp('^06(| |-)[0-9]{8}$');
-const emailValidator = new RegExp('^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$');
-const passwordValidator = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$');
+const phoneValidator      = new RegExp('^06(| |-)[0-9]{8}$');
+const emailValidator      = new RegExp('^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$');
+const passwordValidator   = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$');
 
 module.exports = {
     registerUser: (req, res, next) => {
         logger.info('registerUser is called.');
         const user = req.body;
 
+        // Checking if the body is filled in correctly.
         try {
             assert.equal(typeof user.firstName, 'string', 'firstName is required.');
             assert.equal(typeof user.lastName, 'string', 'lastName is required.');
@@ -29,8 +32,9 @@ module.exports = {
                 code: 500
             };
             return next(errorObject);
-        };
+        }
 
+        // Setting up the query.
             const query =
                 `INSERT INTO DBUser(FirstName, LastName, StreetAddress, PostalCode, City, DateOfBirth, PhoneNumber, EmailAddress, Password)` +
                 `VALUES ('${user.firstName}', '${user.lastName}', '${user.streetAddress}', ` +
@@ -38,9 +42,9 @@ module.exports = {
                 `'${user.phoneNumber}', '${user.emailAddress}', '${user.password}') ` +
                 `; SELECT SCOPE_IDENTITY() AS UserId`;
 
+        // Executing the query and giving back result or error.
             database.executeQuery(query, (err, rows) => {
                 if (err) {
-                    console.log(err);
                     const errorObject = {
                         message: 'Error at INSERT INTO DBUser.',
                         code: 500
@@ -58,8 +62,10 @@ module.exports = {
         logger.info('loginUser is called.');
         const user = req.body;
 
+        // Setting up the query.
         const query = `SELECT Password, UserId FROM DBUser WHERE EmailAddress = '${user.emailAddress}'`;
 
+        // Executing the query and giving back result or error.
         database.executeQuery(query, (err, rows) => {
             if (err) {
                 const errorObject = {
@@ -82,10 +88,12 @@ module.exports = {
                     logger.info('Password match, user logged id.');
                     logger.trace(rows.recordset);
 
+                    // Getting the userId from the user that is logged in.
                     const payload = {
                         UserId: rows.recordset[0].UserId
                     };
 
+                    // Setting up the JWT token for the user.
                     jwt.sign({data: payload}, 'secretkey', {expiresIn: 60 * 60 * 24}, (err, token) => {
                         if (err) {
                             const errorObject = {
@@ -112,6 +120,7 @@ module.exports = {
         const authHeader = req.headers.authorization;
         const token = authHeader.substring(7, authHeader.length);
 
+        // If authorization is missing.
         if (!authHeader) {
             errorObject = {
                 message: 'Authorization header missing!',
@@ -121,6 +130,7 @@ module.exports = {
             return next(errorObject)
         }
 
+        // Checking if token is valid.
         jwt.verify(token, 'secretkey', (err, payload) => {
             if (err) {
                 errorObject = {
