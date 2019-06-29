@@ -164,7 +164,7 @@ describe('PUT Apartment', () => {
 describe('DELETE Apartment', () => {
    it('Delete apartment.', done => {
        chai.request(server)
-           .delete('/api/apartments/1846')
+           .delete('/api/apartments/1749')
            .set('Authorization', 'Bearer ' + token)
            .end(function (err, res, body) {
                res.should.have.status(200);
@@ -217,7 +217,7 @@ describe('POST Reservation', () => {
                 "endDate": "2019-07-31"
             })
             .end(function (err, res, body) {
-                res.should.have.status(500);
+                res.should.have.status(401);
                 done()
             })
     });
@@ -338,7 +338,7 @@ describe('PUT Reservation', () => {
 describe('DELETE Reservation', () => {
     it('Delete reservation.', done => {
         chai.request(server)
-            .delete('/api/apartments/reservations/1285')
+            .delete('/api/apartments/reservations/1353')
             .set('Authorization', 'Bearer ' + token)
             .end(function (err, res, body) {
                 res.should.have.status(200);

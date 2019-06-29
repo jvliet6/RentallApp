@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5c1bb4b-a176-4a0f-9429-eb05d1327e8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/appconfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/appconfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/apartment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/apartment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/authentication.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/authentication.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/reservation.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/reservation.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datalayer/mssql.dao.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datalayer/mssql.dao.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/apartment.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/apartment.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/authentication.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authentication.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/reservation.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/reservation.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,7 +14,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="195" column="35" selection-start-line="195" selection-start-column="35" selection-end-line="195" selection-end-column="35" />
+              <folding>
+                <element signature="e#677#1773#0" />
+                <element signature="e#1809#2659#0" />
+                <element signature="e#2695#4852#0" />
+                <element signature="e#4891#5833#0" />
+                <element signature="e#5872#7205#0" />
+                <element signature="e#7244#8650#0" />
+                <element signature="e#8688#10285#0" />
+                <element signature="e#10326#11334#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="948" />
     <option name="y" value="-12" />
     <option name="width" value="984" />
@@ -180,11 +189,12 @@
       <workItem from="1561619650066" duration="4951000" />
       <workItem from="1561636348859" duration="5701000" />
       <workItem from="1561842217596" duration="3226000" />
+      <workItem from="1561845699518" duration="284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137137000" />
+    <option name="totallyTimeSpent" value="137421000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -197,8 +207,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1805668" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1805668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Project Explorer" order="3" />
@@ -375,18 +386,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="367" column="3" selection-start-line="367" selection-start-column="3" selection-end-line="367" selection-end-column="3" />
+        <state relative-caret-position="300">
+          <caret line="195" column="35" selection-start-line="195" selection-start-column="35" selection-end-line="195" selection-end-column="35" />
           <folding>
-            <element signature="e#407#446#0" />
-            <element signature="e#548#1644#0" />
-            <element signature="e#1680#2530#0" />
-            <element signature="e#2566#4723#0" />
-            <element signature="e#4762#5704#0" />
-            <element signature="e#5743#7076#0" />
-            <element signature="e#7115#8521#0" />
-            <element signature="e#8559#10156#0" />
-            <element signature="e#10197#11205#0" />
+            <element signature="e#677#1773#0" />
+            <element signature="e#1809#2659#0" />
+            <element signature="e#2695#4852#0" />
+            <element signature="e#4891#5833#0" />
+            <element signature="e#5872#7205#0" />
+            <element signature="e#7244#8650#0" />
+            <element signature="e#8688#10285#0" />
+            <element signature="e#10326#11334#0" />
           </folding>
         </state>
       </provider>
